@@ -1,0 +1,122 @@
+  "version": 1,
+  "author": "Anurag Rao",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 124.61, "left": 404.62, "attrs": {} },
+    { "type": "wokwi-breadboard-mini", "id": "bb1", "top": -1182.2, "left": -472.8, "attrs": {} },
+    { "type": "wokwi-breadboard-mini", "id": "bb2", "top": -1047.8, "left": -472.8, "attrs": {} },
+    { "type": "wokwi-breadboard-mini", "id": "bb3", "top": -903.8, "left": -472.8, "attrs": {} },
+    { "type": "wokwi-breadboard-mini", "id": "bb4", "top": -759.8, "left": -472.8, "attrs": {} },
+    { "type": "wokwi-breadboard-mini", "id": "bb5", "top": -615.8, "left": -472.8, "attrs": {} },
+    { "type": "wokwi-breadboard-mini", "id": "bb6", "top": -462.2, "left": -472.8, "attrs": {} },
+    { "type": "wokwi-breadboard-mini", "id": "bb7", "top": -318.2, "left": -472.8, "attrs": {} },
+    { "type": "wokwi-breadboard-mini", "id": "bb8", "top": -164.6, "left": -472.8, "attrs": {} },
+    { "type": "wokwi-breadboard-mini", "id": "bb9", "top": -164.6, "left": -664.8, "attrs": {} },
+    { "type": "wokwi-breadboard-mini", "id": "bb10", "top": -164.6, "left": -856.8, "attrs": {} },
+    { "type": "wokwi-breadboard-mini", "id": "bb11", "top": -164.6, "left": -1039.2, "attrs": {} },
+    { "type": "wokwi-breadboard-mini", "id": "bb12", "top": -155, "left": -1231.2, "attrs": {} },
+    { "type": "wokwi-breadboard-mini", "id": "bb13", "top": -145.4, "left": -1423.2, "attrs": {} },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": -603.3,
+      "left": -224.9,
+      "attrs": { "distance": "400" }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic2",
+      "top": -958.5,
+      "left": -224.9,
+      "attrs": { "distance": "400" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -272.4,
+      "left": -207.4,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -272.4,
+      "left": -245.8,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic3",
+      "top": 5.59,
+      "left": -941.7,
+      "attrs": { "distance": "400" }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic4",
+      "top": 10.79,
+      "left": -1305.58,
+      "attrs": { "distance": "400" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 121.86,
+      "left": -619.14,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led4",
+      "top": 121.38,
+      "left": -586.7,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot1",
+      "top": -278.58,
+      "left": -788.58,
+      "attrs": { "travelLength": "30" }
+    },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot2",
+      "top": -338.7,
+      "left": -113.06,
+      "attrs": { "travelLength": "30" }
+    }
+  ],
+  "connections": [
+    [ "ultrasonic1:VCC", "uno:5V", "red", [ "v36.34", "h-96.21", "v233.71", "h171.76" ] ],
+    [ "ultrasonic2:VCC", "uno:5V", "red", [ "v23.16", "h-1.29", "v247.31", "h437.7" ] ],
+    [ "ultrasonic1:GND", "uno:GND.1", "black", [ "v44.31", "h-3.49" ] ],
+    [ "ultrasonic2:GND", "uno:GND.1", "black", [ "v45.21", "h-196.7" ] ],
+    [ "ultrasonic1:TRIG", "uno:6", "green", [ "v34.46", "h107.08" ] ],
+    [ "ultrasonic1:ECHO", "uno:7", "green", [ "v27.89", "h88.4" ] ],
+    [ "ultrasonic2:TRIG", "uno:8", "green", [ "v52.25", "h-126.01" ] ],
+    [ "ultrasonic2:ECHO", "uno:9", "green", [ "v40.99", "h-143.29" ] ],
+    [ "led1:C", "uno:GND.3", "green", [ "v178", "h-57.83" ] ],
+    [ "led2:C", "uno:GND.3", "green", [ "v185.54", "h-177.76" ] ],
+    [ "led2:A", "uno:2", "green", [ "v29.36", "h-128" ] ],
+    [ "led1:A", "uno:3", "green", [ "v40.91", "h-98.46" ] ],
+    [ "ultrasonic3:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "ultrasonic3:GND", "uno:GND.2", "black", [ "h322.78", "v-364.7" ] ],
+    [ "ultrasonic4:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "ultrasonic4:GND", "uno:GND.3", "black", [ "v-14.56", "h-333.03" ] ],
+    [ "ultrasonic3:TRIG", "uno:10", "green", [ "v-569.64", "h312.96" ] ],
+    [ "ultrasonic3:ECHO", "uno:11", "green", [ "v-569.88", "h292.29" ] ],
+    [ "ultrasonic4:TRIG", "uno:12", "green", [ "v-216.11", "h11.77", "v-361.06", "h-378.35" ] ],
+    [ "ultrasonic4:ECHO", "uno:13", "green", [ "v-207.53", "h12.14", "v-377.18", "h-390.8" ] ],
+    [ "led3:C", "uno:GND.3", "green", [ "v8.99", "h-106.94", "v-278.72", "h722.55" ] ],
+    [ "led4:C", "uno:GND.3", "green", [ "v-133.17", "h71.9" ] ],
+    [ "led3:A", "uno:4", "green", [ "v25.81", "h36.26", "v-561.3", "h467.41" ] ],
+    [ "led4:A", "uno:5", "green", [ "v-385.86", "h339.51", "v-129.21", "h234.74" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "h509.02", "v298.06", "h466.99", "v98.57" ] ],
+    [ "pot1:GND", "uno:GND.3", "black", [ "v322.7", "h654.18", "v282.16", "h532.29" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "h304.35", "v666.12", "h335.74" ] ],
+    [ "pot2:SIG", "uno:A1", "green", [ "h424.42", "v500.58" ] ],
+    [ "pot2:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "pot2:GND", "uno:GND.2", "black", [ "v518.55", "h148.72" ] ]
+  ]
+}
