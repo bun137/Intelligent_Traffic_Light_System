@@ -12,6 +12,9 @@ What it does
 
 How It Works
 -------------
+
+### [Chekout The Simulation Here](https://wokwi.com/projects/349433108451295826)
+
 - A series of sensors is put on each incoming road, something similar to this:
 ![sensor-layout](https://cdn.discordapp.com/attachments/1080892669313699881/1142152738579415050/image.png)
 
