@@ -23,3 +23,9 @@ How It Works
 - This model also adapts to new data fed from the sensors. This allows us to override the predicted traffic level to the real time levels, in the case where traffic levels are unexpected.
 - Safety Considerations: Pedestrian crossing times are considered in the signal light adjustments. We have also built in a failsafe if our sensors have failed. Additionally, varying vehicle types are accounted for in the optimisation process by using time buffers considering various scenarios like sudden spikes in traffic density from one side and so on.
 
+## Maintainer
+
+[Shreya Gurram](https://github.com/bun137)
+
+[gurram13775@gmail.com](mailto:gurram13775@gmail.com)
+
