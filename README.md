@@ -25,7 +25,12 @@ How It Works
 
 ## Maintainer
 
-[Shreya Gurram](https://github.com/bun137)
+1. [Anurag Rao](https://github.com/anuragrao04)
+
+[raoanu2004@gmail.com](mailto:raoanu2004@gmail.com)
+
+2. [Shreya Gurram](https://github.com/bun137)
 
 [gurram13775@gmail.com](mailto:gurram13775@gmail.com)
+
 
