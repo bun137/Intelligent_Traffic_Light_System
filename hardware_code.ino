@@ -259,15 +259,17 @@ void signal1Open(float duration){
   digitalWrite(GREENLIGHT1, HIGH);
   digitalWrite(REDLIGHT2, HIGH);
   digitalWrite(GREENLIGHT2, LOW);
-  for(int i = 0; i < duration; i+= 0.01){
-    delay(i*1000);
+  for(int i = 0; i < duration; i+= 1){
+    
+    Serial.println(i);
+    delay(1000);
     while(analogRead(A0) >= 500){
-      signal2Open(0.01);
-      delay(50);
+      Serial.println("Ambulance from 2");
+      signal2Open(1);
     }
     while(analogRead(A1) >= 500){
-      signal1Open(0.01);
-      delay(50);
+      Serial.println("Ambulance from 1");
+      signal1Open(1);
       
     }
   }
@@ -281,16 +283,19 @@ void signal2Open(float duration){
   digitalWrite(GREENLIGHT2, HIGH);
   digitalWrite(REDLIGHT1, HIGH);
   digitalWrite(GREENLIGHT1, LOW);
-  for(int i = 0; i < duration; i+=0.01){
-    delay(i*1000);
+  for(int i = 0; i < duration; i+=1){
+    Serial.println(i);
+
+    delay(1000);
+
     while(analogRead(A0) >= 500){
-      signal2Open(0.01);
-      delay(50);
+      Serial.println("Ambulance from 2");
+      signal2Open(1);
+      
     }
     while(analogRead(A1) >= 500){
-      signal1Open(0.01);
-      delay(50);
-      
+      Serial.println("Ambulance from 1");
+      signal1Open(1);      
     }
   }
 }
