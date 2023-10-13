@@ -49,3 +49,60 @@ void loop()
 bool isCNN(){
     return true; //placeholder
 }
+
+//Add ambulance siren
+#include <fftw3.h>
+#include <iostream>
+#include <fstream>
+#include <cmath>
+
+// Function to apply FFT and analyze frequency-domain data
+void analyzeAudioData(double* audioData, int dataSize) {
+    // Create FFTW plan
+    fftw_complex* fftResult = fftw_alloc_complex(dataSize);
+    fftw_plan plan = fftw_plan_dft_r2c_1d(dataSize, audioData, fftResult, FFTW_ESTIMATE);
+    
+    // Execute FFT
+    fftw_execute(plan);
+    
+    // Analyze frequency-domain data
+    for (int i = 0; i < dataSize; i++) {
+        double real = fftResult[i][0];
+        double imag = fftResult[i][1];
+        double magnitude = sqrt((real * real) + (imag * imag));
+        
+        // If the magnitude of a frequency falls within the range of an ambulance siren,
+        // print that the siren has been detected
+        if (magnitude >= SIREN_MIN_FREQ && magnitude <= SIREN_MAX_FREQ) {
+            std::cout << "Ambulance siren detected!" << std::endl;
+            break;
+        }
+    }
+    
+    // Clean up
+    fftw_destroy_plan(plan);
+    fftw_free(fftResult);
+}
+
+int main() {
+    // Load audio data from file
+    std::ifstream file("audioData.wav", std::ios::binary | std::ios::in);
+    if (!file) {
+        std::cerr << "Failed to open audio file!" << std::endl;
+        return 1;
+    }
+    
+    // Read audio data into buffer
+    file.seekg(0, std::ios::end);
+    int dataSize = file.tellg();
+    file.seekg(0, std::ios::beg);
+    double* audioData = new double[dataSize];
+    file.read(reinterpret_cast<char*>(audioData), dataSize);
+    file.close();
+    
+    // Analyze audio data
+    analyzeAudioData(audioData, dataSize);
+    
+    delete[] audioData;
+    return 0;
+}
