@@ -16,7 +16,7 @@ How It Works
 ### [Chekout The Simulation Here](https://wokwi.com/projects/349433108451295826)
 
 - A series of sensors is put on each incoming road, something similar to this:
-![sensor-layout](https://cdn.discordapp.com/attachments/1080892669313699881/1142152738579415050/image.png)
+![sensor-layout](https://cdn.discordapp.com/attachments/1080892669313699881/1142152738579415050/image.png?ex=661973a1&is=6606fea1&hm=b534aef9e2d16418d087ca0657494fc272609ba2689f3c2e66901b68baec3d6f&)
 
 - There are multiple sensors on each incoming road. If sensor 1 is blocked by a vehicle, that translates to traffic level 1. Sensor 2 = traffic level 2 and so on until sensor level n.
 - This raw data is collected for a prototype on an Arduino and sent to Python through USB Serial along with a timestamp.
